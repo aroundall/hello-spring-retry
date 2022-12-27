@@ -1,0 +1,8 @@
+logging:
+  level:
+    ROOT: info
+    org.springframework.web.client: debug
+
+retry:
+  max-attempts: 3
+  max-delay: 2

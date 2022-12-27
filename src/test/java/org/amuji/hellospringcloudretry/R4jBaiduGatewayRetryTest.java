@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.Profile;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
@@ -26,12 +25,12 @@ import static org.springframework.test.web.client.response.MockRestResponseCreat
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
 @ActiveProfiles("r4j-retry")
-public class BaiduGatewayRetryTest {
+public class R4jBaiduGatewayRetryTest {
     @Autowired
     RestTemplate rest;
 
     @Autowired
-    BaiduGateway gateway;
+    R4jBaiduGateway gateway;
 
     private MockRestServiceServer mockServer;
 

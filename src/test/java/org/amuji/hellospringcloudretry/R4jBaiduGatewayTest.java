@@ -10,9 +10,9 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import static org.assertj.core.api.Assertions.assertThat;
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
-class BaiduGatewayTest {
+class R4jBaiduGatewayTest {
     @Autowired
-    BaiduGateway gateway;
+    R4jBaiduGateway gateway;
 
     @Test
     void access_home_page() {
