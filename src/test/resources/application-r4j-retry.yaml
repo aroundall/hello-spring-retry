@@ -1,0 +1,10 @@
+logging:
+  level:
+    ROOT: info
+    org.springframework.web.client: debug
+resilience4j:
+  retry:
+    configs:
+      default:
+        max-attempts: 3
+        wait-duration: 3s
