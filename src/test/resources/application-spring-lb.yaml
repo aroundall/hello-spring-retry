@@ -1,0 +1,23 @@
+logging:
+  level:
+    ROOT: debug
+
+spring:
+  cloud:
+    discovery:
+      client:
+        simple:
+          instances:
+            baidu-service:
+              - instanceId: baidu-01
+                serviceId: baidu-service
+                host: localhost
+                port: 26693
+    loadbalancer:
+      retry:
+        enabled: true
+        max-retries-on-next-service-instance: 0
+        max-retries-on-same-service-instance: 3
+        avoid-previous-instance: false
+        retryable-status-codes: 503, 504
+        retry-on-all-operations: true
